@@ -113,7 +113,7 @@ overflow: hidden;
         
         .clock .number{
             --rotation: 0;
-            margin-left: 70px;
+            margin-left: 80px;
             position: absolute;
             width: 45%;
             height: 45%;
