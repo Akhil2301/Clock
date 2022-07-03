@@ -88,4 +88,93 @@ overflow: hidden;
      height:15%;
      background-color: rgba(50, 11, 247, 0.167);
  }
- 
+
+ @media only screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(to right,rgb(100, 5, 100),rgba(17, 20, 203, 0.8));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        overflow: hidden;
+        }
+        
+        .clock{
+            
+            margin: auto;
+            padding-top: 32px;
+          
+            width: 350px;
+            height: 350px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        
+        .clock .number{
+            --rotation: 0;
+            margin-left: 70px;
+            position: absolute;
+            width: 45%;
+            height: 45%;
+            text-align: center;
+            transform: rotate(var(--rotation));
+            font-size: 1.5rem;
+        }
+        .clock .number1{--rotation:30deg;}
+        .clock .number2{--rotation:60deg;}
+        .clock .number3{--rotation:90deg;}
+        .clock .number4{--rotation:120deg;}
+        .clock .number5{--rotation:150deg;}
+        .clock .number6{--rotation:180deg;}
+        .clock .number7{--rotation:210deg;}
+        .clock .number8{--rotation:240deg;}
+        .clock .number9{--rotation:270deg;}
+        .clock .number10{--rotation:300deg;}
+        .clock .number11{--rotation:330deg;}
+        .clock .number12{--rotation:360;}
+        
+        .clock .hand{
+            --rotation: 0;
+            position:absolute;
+            bottom:70%;
+            left:50%;
+            
+            background-color: black;
+            border:2px solid white;
+            border-top-right-radius: 15px;
+            z-index: 10;
+            transform-origin: bottom;
+            transform: translate(-50%) rotate(calc(var(--rotation)*1deg));
+        }
+        .clock::after{
+            content: '';
+            position: absolute;
+            background-color: black;
+            z-index: 11;   
+            right:750px;
+            width:15px ;
+            height: 15px;
+            top: 29%;
+            transform: translate(-50%,-50%);
+            border-radius:52%;
+             
+        }
+        .clock .hand.second{
+            width: 5px;
+            height:21%;
+            background-color: rgb(15, 231, 55);
+        }
+        
+        .clock .hand.minute{
+             width:8px;
+             height:16%;
+             background-color: rgb(0, 0, 0);
+         }
+         .clock .hand.hour{
+            width: 12px;
+             height:15%;
+             background-color: rgba(50, 11, 247, 0.167);
+         }
+    
+  }
